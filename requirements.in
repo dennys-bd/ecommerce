@@ -1,0 +1,8 @@
+django
+djangorestframework
+django-extensions
+django-model-utils
+dj-database-url
+gunicorn
+psycopg2-binary
+python-decouple

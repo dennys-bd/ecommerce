@@ -1,0 +1,9 @@
+bandit
+coverage
+django
+factory_boy
+ipython
+isort
+pre-commit
+prospector==1.2
+safety
