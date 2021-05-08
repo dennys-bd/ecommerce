@@ -27,6 +27,7 @@ DEBUG = config('DEBUG', 'False', cast=bool)
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'clients.Client'
 
 # Application definition
 
@@ -58,7 +59,10 @@ ROOT_URLCONF = 'ecommerce.urls'
 
 REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
-    # 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'clients.authentication.EJWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',)
 }
 
 

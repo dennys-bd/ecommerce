@@ -15,8 +15,6 @@ repos:
     - id: detect-private-key
     - id: double-quote-string-fixer
     - id: fix-byte-order-marker
-    - id: name-tests-test
-      args: ['--django']
 
 - repo: local
   hooks:
