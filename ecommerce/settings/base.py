@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'clients',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,7 @@ LOGGING = {
         '': {'handlers': ['console'], 'level': 'INFO'},
     },
 }
+
+
+# Apis
+PRODUCT_API = config('PRODUCT_API')

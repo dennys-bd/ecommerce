@@ -22,6 +22,6 @@ class EJWTAuthentication(JWTAuthentication):
         try:
             return self.get_user(validated_token), validated_token
         except AuthenticationFailed:
-            return get_user_model()(email=validated_token['email'],
-                                    id=validated_token[api_settings.USER_ID_CLAIM]
-                                    ), validated_token
+            return get_user_model().objects.create(
+                email=validated_token['email'], id=validated_token[api_settings.USER_ID_CLAIM]
+            ), validated_token
